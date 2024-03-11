@@ -1,38 +1,128 @@
-.App {
+.todo-list {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 30vw;
+  height: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-btn {
+  padding: 15px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-btn:hover {
+  background-color: #3e8e41;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete-btn,
+.edit-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-btn i,
+.edit-btn i {
+  font-size: 18px;
+  color: #999;
+}
+
+.delete-btn i:hover,
+.edit-btn i:hover {
+  color: #333;
+}
+
+
+.quantity-input {
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.main-container{
+  background-color: #404052;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 50vw;
+  height: 70vh;
+  border-radius: 20px;
+  padding: 40px;
+  overflow-x: auto;
+  
+}
+
+.bg-container{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #212126;
+  height: 100vh;
   color: white;
+  
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.list-container{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 5px;
+  background-color: #745ecc;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-icon{
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-right: 20px;
+  margin-left:  20px;
+}
+.dlt-icon{
+  background-color: transparent;
+  border: none;
+  color: red;
+  margin-left:  20px;
+  margin-right: 20px;
 }
